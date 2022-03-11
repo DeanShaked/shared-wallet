@@ -5,7 +5,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 
 contract Allowance is Ownable {
 
-    event AllowanceChanged(address _forWho,address _fromWhom,uint _oldAmount,uint _newAmount);
+    event AllowanceChanged(address _forWho, address _fromWhom, uint _oldAmount, uint _newAmount);
 
     using SafeMath for uint;
     mapping (address => uint) public allowance;
@@ -14,7 +14,6 @@ contract Allowance is Ownable {
         emit AllowanceChanged(_who, msg.sender, allowance[_who], _amount);
         allowance[_who] = _amount;
     }
-
 
     modifier ownerOrAllowed(uint _amount) { 
         require(isOwner() || allowance[msg.sender] >= _amount,'You are not allowed');
