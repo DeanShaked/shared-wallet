@@ -1,7 +1,7 @@
 # shared-wallet
 
 ## **Asbtract**
-Anyone can deposit to the smart contract yet the withdrawal process depends on the allowance of the address that interact with the smart contract.
+A demonstration of a system where anyone can deposit to the smart contract, yet the withdrawal process depends on the allowance of the address that interact with the smart contract.
 
 ## **Functionality**
 - The owner of the smart contract can withdraw unlimited amount as long as the smart contract balance can afford it.
